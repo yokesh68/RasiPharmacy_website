@@ -20,7 +20,7 @@ export default function SettingsModal({
 
   return (
     <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
-      <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150 flex flex-col md:flex-row h-[85vh] md:h-auto md:min-h-[480px]">
+      <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150 flex flex-col md:flex-row h-[85vh] md:h-[520px]">
         
         {/* Left Sidebar options */}
         <div className="w-full md:w-56 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-100 p-3.5 md:p-6 flex flex-row md:flex-col justify-between items-center md:items-stretch gap-4 md:gap-6 shrink-0 text-left">

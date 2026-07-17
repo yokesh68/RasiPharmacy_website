@@ -2760,12 +2760,8 @@ code {
     display: block;
   }
 
-  .md\:h-auto {
-    height: auto;
-  }
-
-  .md\:min-h-\[480px\] {
-    min-height: 480px;
+  .md\:h-\[520px\] {
+    height: 520px;
   }
 
   .md\:w-56 {
