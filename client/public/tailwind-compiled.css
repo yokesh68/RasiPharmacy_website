@@ -2299,6 +2299,14 @@ video {
   transition-duration: 1200ms;
 }
 
+.\[-ms-overflow-style\:none\] {
+  -ms-overflow-style: none;
+}
+
+.\[scrollbar-width\:none\] {
+  scrollbar-width: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -2859,4 +2867,8 @@ code {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+.\[\&\:\:-webkit-scrollbar\]\:hidden::-webkit-scrollbar {
+  display: none;
 }

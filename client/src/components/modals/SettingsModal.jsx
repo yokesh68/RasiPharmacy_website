@@ -19,7 +19,7 @@ export default function SettingsModal({
   if (!isSettingsOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
+    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150 flex flex-col md:flex-row h-[85vh] md:h-[520px]">
         
         {/* Left Sidebar options */}
@@ -73,7 +73,7 @@ export default function SettingsModal({
         </div>
 
         {/* Right Detail Pane */}
-        <div className="flex-1 p-5 md:p-6 flex flex-col justify-between overflow-y-auto text-left h-full">
+        <div className="flex-1 p-5 md:p-6 flex flex-col justify-between overflow-y-auto text-left h-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div>
             <div className="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
               <h3 className="font-extrabold text-slate-800 text-base uppercase tracking-tight">
@@ -140,7 +140,7 @@ export default function SettingsModal({
 
             {/* Tab 2: Order History */}
             {settingsActiveTab === 'history' && (
-              <div className="space-y-3 max-h-[300px] overflow-y-auto pr-1">
+              <div className="space-y-3 max-h-[300px] overflow-y-auto pr-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 {orders.length > 0 ? (
                   orders.map(ord => (
                     <div key={ord.id} className="p-3.5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2.5 text-left">
