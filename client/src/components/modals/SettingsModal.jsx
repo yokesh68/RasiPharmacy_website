@@ -157,7 +157,7 @@ export default function SettingsModal({
                       </div>
 
                       <div className="space-y-1">
-                        {ord.items.map(item => (
+                        {(ord.items || []).map(item => (
                           <div key={item.id} className="flex justify-between text-[11px] font-bold text-slate-600">
                             <span>{item.name} <strong className="text-emerald-700">x{item.quantity}</strong></span>
                             <span>₹{(item.price * item.quantity).toFixed(2)}</span>

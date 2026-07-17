@@ -15,7 +15,7 @@ export default function TrackingView({ lastPlacedOrder, medicines }) {
             <div>
               <h4 className="font-bold text-emerald-900 text-sm">Order {lastPlacedOrder.id} Placed!</h4>
               <p className="text-xs text-emerald-700 mt-1">
-                Our pharmacist is packaging your medicine. Total items: {lastPlacedOrder.items.reduce((s, i) => s + i.quantity, 0)}.
+                Our pharmacist is packaging your medicine. Total items: {(lastPlacedOrder.items || []).reduce((s, i) => s + i.quantity, 0)}.
               </p>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function TrackingView({ lastPlacedOrder, medicines }) {
                   <span className="text-[10px] font-bold text-slate-400 block uppercase mb-2">Attached Prescriptions</span>
                   <div className="flex flex-wrap gap-3">
                     {Object.entries(lastPlacedOrder.prescriptions).map(([medId, fileData]) => {
-                      const med = medicines.find(m => m.id === medId) || lastPlacedOrder.items.find(i => i.id === medId);
+                      const med = medicines.find(m => m.id === medId) || (lastPlacedOrder.items || []).find(i => i.id === medId);
                       return (
                         <div key={medId} className="flex items-center gap-2 bg-white border border-slate-200 p-1.5 rounded-xl">
                           <img 
