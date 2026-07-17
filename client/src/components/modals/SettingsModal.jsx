@@ -20,60 +20,60 @@ export default function SettingsModal({
 
   return (
     <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
-      <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150 flex flex-col md:flex-row min-h-[450px]">
+      <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150 flex flex-col md:flex-row h-[85vh] md:h-auto md:min-h-[480px]">
         
         {/* Left Sidebar options */}
-        <div className="w-full md:w-56 bg-slate-50 border-r border-slate-100 p-6 flex flex-col justify-between gap-6 shrink-0 text-left">
-          <div className="space-y-5">
-            <div>
+        <div className="w-full md:w-56 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-100 p-3.5 md:p-6 flex flex-row md:flex-col justify-between items-center md:items-stretch gap-4 md:gap-6 shrink-0 text-left">
+          <div className="space-y-5 w-full">
+            <div className="hidden md:block">
               <h4 className="font-extrabold text-slate-800 text-sm">System Options</h4>
               <p className="text-[10px] text-slate-400">Manage account & portals</p>
             </div>
 
-            <nav className="flex md:flex-col gap-1 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
+            <nav className="flex flex-row md:flex-col gap-1.5 overflow-x-auto md:overflow-x-visible pb-1 md:pb-0 w-full scrollbar-none">
               <button
                 type="button"
                 onClick={() => setSettingsActiveTab('profile')}
-                className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 whitespace-nowrap ${
+                className={`flex-1 md:w-full text-center md:text-left px-3 py-2 rounded-xl text-[11px] md:text-xs font-bold transition flex items-center justify-center md:justify-start gap-1.5 whitespace-nowrap ${
                   settingsActiveTab === 'profile' 
                     ? 'bg-emerald-600 text-white shadow-sm' 
                     : 'text-slate-600 hover:bg-slate-100'
                 }`}
               >
-                <User className="w-4 h-4" /> User Profile
+                <User className="w-3.5 h-3.5" /> User Profile
               </button>
               <button
                 type="button"
                 onClick={() => setSettingsActiveTab('history')}
-                className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 whitespace-nowrap ${
+                className={`flex-1 md:w-full text-center md:text-left px-3 py-2 rounded-xl text-[11px] md:text-xs font-bold transition flex items-center justify-center md:justify-start gap-1.5 whitespace-nowrap ${
                   settingsActiveTab === 'history' 
                     ? 'bg-emerald-600 text-white shadow-sm' 
                     : 'text-slate-600 hover:bg-slate-100'
                 }`}
               >
-                <History className="w-4 h-4" /> Order History
+                <History className="w-3.5 h-3.5" /> Order History
               </button>
               <button
                 type="button"
                 onClick={() => setSettingsActiveTab('staff-access')}
-                className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 whitespace-nowrap ${
+                className={`flex-1 md:w-full text-center md:text-left px-3 py-2 rounded-xl text-[11px] md:text-xs font-bold transition flex items-center justify-center md:justify-start gap-1.5 whitespace-nowrap ${
                   settingsActiveTab === 'staff-access' 
                     ? 'bg-emerald-600 text-white shadow-sm' 
                     : 'text-slate-600 hover:bg-slate-100'
                 }`}
               >
-                <ShieldCheck className="w-4 h-4" /> Staff Portals
+                <ShieldCheck className="w-3.5 h-3.5" /> Staff Portals
               </button>
             </nav>
           </div>
 
-          <div className="text-[10px] text-slate-400 font-medium leading-relaxed bg-slate-100 p-3 rounded-xl">
+          <div className="hidden md:block text-[10px] text-slate-400 font-medium leading-relaxed bg-slate-100 p-3 rounded-xl">
             🔒 Session active. Verified via mobile SMS authorization.
           </div>
         </div>
 
         {/* Right Detail Pane */}
-        <div className="flex-1 p-6 flex flex-col justify-between text-left">
+        <div className="flex-1 p-5 md:p-6 flex flex-col justify-between overflow-y-auto text-left h-full">
           <div>
             <div className="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
               <h3 className="font-extrabold text-slate-800 text-base uppercase tracking-tight">
