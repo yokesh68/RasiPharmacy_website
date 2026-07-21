@@ -7,7 +7,8 @@ import {
   FileText, 
   Camera, 
   ListFilter, 
-  ShoppingCart 
+  ShoppingCart,
+  Phone
 } from 'lucide-react';
 
 const BG_IMAGES = [
@@ -82,6 +83,18 @@ export default function MedicineShop({
             </defs>
             <rect width="100%" height="100%" fill="url(#medical-grid)" />
           </svg>
+        </div>
+
+        {/* Helpline Number Badge */}
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20">
+          <a 
+            href="tel:7448849777" 
+            className="flex items-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 hover:border-white/50 text-white font-extrabold text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg transition-all transform hover:scale-105 active:scale-95"
+            title="Call Support"
+          >
+            <Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400 animate-pulse" />
+            <span>744 884 9777</span>
+          </a>
         </div>
 
         <div className="absolute top-6 right-10 text-white/10 pointer-events-none select-none hidden md:block z-10">

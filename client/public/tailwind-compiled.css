@@ -1441,6 +1441,10 @@ video {
   border-color: rgb(255 255 255 / 0.25);
 }
 
+.border-white\/30 {
+  border-color: rgb(255 255 255 / 0.3);
+}
+
 .bg-amber-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 243 199 / var(--tw-bg-opacity, 1));
@@ -1593,6 +1597,10 @@ video {
 
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.bg-white\/20 {
+  background-color: rgb(255 255 255 / 0.2);
 }
 
 .bg-gradient-to-l {
@@ -2482,6 +2490,12 @@ code {
   padding-bottom: 0px;
 }
 
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:border-emerald-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(110 231 183 / var(--tw-border-opacity, 1));
@@ -2509,6 +2523,10 @@ code {
 
 .hover\:border-white\/45:hover {
   border-color: rgb(255 255 255 / 0.45);
+}
+
+.hover\:border-white\/50:hover {
+  border-color: rgb(255 255 255 / 0.5);
 }
 
 .hover\:bg-amber-600:hover {
@@ -2577,6 +2595,10 @@ code {
 
 .hover\:bg-white\/10:hover {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.hover\:bg-white\/30:hover {
+  background-color: rgb(255 255 255 / 0.3);
 }
 
 .hover\:text-emerald-100:hover {
@@ -2681,6 +2703,12 @@ code {
   outline-offset: 2px;
 }
 
+.active\:scale-95:active {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .disabled\:bg-slate-700:disabled {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity, 1));
@@ -2703,12 +2731,28 @@ code {
 }
 
 @media (min-width: 640px) {
+  .sm\:right-6 {
+    right: 1.5rem;
+  }
+
+  .sm\:top-6 {
+    top: 1.5rem;
+  }
+
   .sm\:ml-16 {
     margin-left: 4rem;
   }
 
+  .sm\:h-3\.5 {
+    height: 0.875rem;
+  }
+
   .sm\:min-h-\[440px\] {
     min-height: 440px;
+  }
+
+  .sm\:w-3\.5 {
+    width: 0.875rem;
   }
 
   .sm\:w-auto {
@@ -2739,9 +2783,19 @@ code {
     padding: 3rem;
   }
 
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .sm\:pt-0 {
@@ -2760,6 +2814,11 @@ code {
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
